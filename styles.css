@@ -1,0 +1,359 @@
+
+.stMain{
+    & .stMainBlockContainer{
+        max-width:100%;
+    }
+}
+
+div, p, button, h2, h1 {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+.stHeading{
+    & h1{
+        font-size:24px;
+        padding-top:0;
+        margin-top:0;
+    }
+}
+
+.st-key-selectWrapper, .st-key-stselectWrapper{
+    & .stSelectbox{
+        & svg{
+            cursor: pointer;
+        }
+    }
+}
+
+/* .st-key-selectWrapper::before{
+    content: "\f234";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-style: normal;
+    margin-right: 8px;    
+} */
+
+
+.st-key-col1, .st-key-col2{
+    & button{
+        border:1px solid #c2c2c2 solid #1685BE;
+        background-color:#1685BE;
+        color:#FFFFFF;
+        &:hover, &:active, &:focus, &:focus:not(:active){
+            border:1px solid #c2c2c2 solid #1685BE;
+            background-color:#1971A1;
+            color:#FFFFFF;
+        }
+    }
+}
+
+
+.st-key-primary button, .st-key-containerprimary button,
+.st-key-openModal button{
+    border:1px solid #c2c2c2 solid #1685BE;
+}
+.st-key-primary button:hover, 
+.st-key-containerprimary button:hover, 
+.st-key-openModal button:hover, 
+.st-key-primary button:focus:not(:active), 
+.st-key-containerprimary button:focus:not(:active), 
+.st-key-openModal button:focus:not(:active),
+.st-key-primary button:active, 
+.st-key-containerprimary button:active, 
+.st-key-openModal button:active{
+    border:1px solid #c2c2c2 solid #1685BE;
+    background-color:#1685BE;
+    color:#FFFFFF;
+}
+.st-key-secondary button{
+    border:1px solid #c2c2c2 solid #1685BE;
+    background-color:#1685BE;
+    color:#FFFFFF;
+    &:hover, &:active, &:focus, &:focus:not(:active){
+        border:1px solid #c2c2c2 solid #1685BE;
+        background-color:#1971A1;
+        color:#FFFFFF;
+    }
+}
+/* .st-key-secondary button:hover
+.st-key-secondary button:focus:not(:active), 
+.st-key-secondary button:active{
+} */
+
+
+.st-key-chatinput{
+    & .stChatInput{
+        border:2px solid #1971A1;
+    }
+}
+
+.stExpander{
+    & details{
+        border:1px solid #1685BE;
+        & summary{
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            & span{
+                flex:none;
+            }
+        }
+    }
+}
+
+[key="demo-modal"]{
+    & .stHorizontalBlock{
+        & h2{
+            padding:0;
+            margin:0;
+            font-size:24px;
+        }
+        & [kind="secondary"]{
+            border:1px solid #1685BE !important;
+            color:#1685BE;
+            position: absolute;
+            right: 0;
+            border:0;
+            min-height:auto;
+            padding: 3px 8px !important;
+            border-radius: 0;
+            line-height: normal;
+            &:hover, &:focus, :active{
+                border:1px solid #1685BE;
+                background-color:#1971A1;
+                color:#FFFFFF;
+            }
+        }
+    }
+    & .stButton{
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+
+.st-key-parent-container, .st-key-parentcontainer{
+    border:2px solid blue !important;
+    max-height:250px;
+    overflow: auto;
+    overflow-x: hidden;
+    padding:24px;
+}
+
+.st-key-column1{
+    background-color: aquamarine;
+}
+.st-key-column2{
+    background-color:lightblue;
+}
+
+.st-key-gridWrapper{
+    border: 1px solid red;
+    & .stDataFrame{
+        width:100% !important;
+    }
+    .col_heading{
+        background-color: #1685BE;
+        color:#FFFFFF;
+        font-size:20px;
+    }
+    & th{
+        background: #7CAE00;
+        color:#FFFFFF;
+    }
+    & tr{
+        &:nth-of-type(odd){
+            background:#DCDCDC;
+        }
+        &:nth-of-type(even){
+            background:#FFFFFF;
+        }
+    }
+    & > div{
+        background: #7CAE00;
+    }
+}
+
+.st-key-faIconWrapper{
+    border: 1px solid red;
+    & i{
+        border: 1px solid blue;
+        font-size: 22px;
+        font-weight: 900;
+    }
+}
+
+[data-testid="stPopoverBody"]{
+    border:2px solid #C2C2C2;
+    padding:16px;
+    min-width:140px;
+    width:140px;
+    & div{
+        width: auto !important;
+    }
+    & .st-key-popover-container{
+        display: flex;
+        flex-direction: column;
+        gap:unset;
+        & .stButton{
+            & button{
+                font-size:14px;
+                color:#464646;
+                width: 100%;
+                justify-content: flex-start;
+                border:none;
+                &:hover, &:active{
+                    background-color: #0000000D;
+                }
+            }
+        }
+        & .st-key-rename-button, & .st-key-delete-button{
+            & button{
+                &::before{
+                    font-family: "Font Awesome 6 Free";
+                    font-weight: 900;
+                    font-style: normal;
+                    margin-right:5px;
+                }
+            }            
+        } 
+        & .st-key-rename-button{
+            & button{
+                &::before{
+                    content: "\f305";
+                }
+            }
+        }
+        & .st-key-delete-button{
+            & button{
+                &::before{
+                    content: "\f1f8";
+                }
+            }
+        }
+    }
+}
+
+div[data-modal-container='true'][key='rename-modal'] > div:first-child > div:first-child > div:first-child{
+    overflow-y: hidden !important;
+}
+div[data-modal-container='true'][key='delete-modal'] > div:first-child > div:first-child > div:first-child{
+    overflow-y: hidden !important;
+}
+div[data-modal-container='true'][key='delete-modal'], 
+div[data-modal-container='true'][key='rename-modal']{
+    z-index:10000000 !important;
+}
+div[data-modal-container='true'][key='rename-modal'] > div:first-child > div:first-child, 
+div[data-modal-container='true'][key='delete-modal'] > div:first-child > div:first-child{
+    max-width:450px;
+    min-width:450px;
+    padding:0px !important;
+    margin:0 auto !important;
+    & .stHorizontalBlock{
+        & h2{
+            color:#FFFFFF;
+            font-size:21px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 0;
+            &::before{
+                content:"\f071";
+                font-family: FontAwesome;
+                margin-right: 10px;
+                font-size:21px;
+                
+            }
+        }
+    }
+    & hr{
+        display:none;
+    }
+    & .stVerticalBlock{
+        width: 100%;
+    }
+    & .stHorizontalBlock{
+        background-color:#9E0B0F;
+        padding:10px 16px;
+        & .stHeading{
+            & > div{
+                margin: 0;
+            }
+        }
+        & .stButton{
+            display:none;
+        }
+    }
+    & .st-key-delete-modal-content, & .st-key-rename-modal-content{
+        [data-testid="stMarkdownContainer"]{
+            padding:0 16px 24px 16px;
+            & p{
+                font-size:16px;
+                color:#464646;
+                margin:0;
+            }
+        }
+    }
+    & .st-key-delete-modal-buttons, & .st-key-rename-modal-buttons{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap:8px;
+        border-top:1px solid #C2C2C2;
+        margin-top:0;
+        padding:16px;
+        & div{
+            width: auto !important;
+        }
+        & .st-key-delete-cancel-button, & .st-key-rename-cancel-button{
+            & button{
+                border:1px solid #1685BE;
+                color:#1685BE;
+                padding:5px 10px !important;
+                min-height: auto;
+                border-radius:5px !important;
+                &:hover, &:focus, &:focus-visible, &:active{
+                    background-color: #1971A1;
+                    color:#FFFFFF;
+                    outline: 0;
+                    box-shadow: none;
+                    border-color:#1971A1;
+                }
+            }
+        }
+        & .st-key-delete-confirm-button, & .st-key-rename-save-button{
+            & button{
+                background-color: #1685BE;
+                color:#FFFFFF;
+                border:1px solid #1685BE;
+                padding:5px 10px !important;
+                min-height: auto;
+                border-radius:5px !important;
+                &:hover, &:focus, &:focus-visible, &:active{
+                    background-color: #1971A1;
+                    color:#FFFFFF;
+                    outline: 0;
+                    box-shadow: none;
+                    border-color:#1685BE;
+                }
+            }
+        }
+    }
+}
+
+
+div[data-modal-container='true'][key='rename-modal'] > div:first-child > div:first-child{
+& .stHorizontalBlock{
+        & h2{
+            &::before{
+                display: none;                
+            }
+        }
+    }    
+    & .stHorizontalBlock{
+        background-color: #1685BE;
+    }
+}
